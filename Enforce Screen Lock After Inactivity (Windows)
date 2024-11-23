@@ -1,0 +1,4 @@
+# Set the screen lock timeout Enforces a screen lock after 5 minutes of inactivity.
+New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "ScreenSaveTimeOut" -Value "300" -PropertyType String -Force
+New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "ScreenSaverIsSecure" -Value "1" -PropertyType String -Force
+Write-Output "Screen lock timeout set to 5 minutes."
