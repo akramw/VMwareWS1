@@ -1,0 +1,14 @@
+<plist>
+  <dict>
+    <key>PayloadType</key>
+    <string>com.apple.wifi.managed</string>
+    <key>SSID_STR</key>
+    <string>CorporateWiFi</string>
+    <key>AutoJoin</key>
+    <true/>
+    <key>EncryptionType</key>
+    <string>WPA</string>
+    <key>Password</key>
+    <string>YourWiFiPassword</string>
+  </dict>
+</plist>
