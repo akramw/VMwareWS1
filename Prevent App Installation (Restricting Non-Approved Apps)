@@ -1,0 +1,17 @@
+#!/bin/bash
+# This script blocks non-approved applications from being installed using macOS system policy.
+# List of approved apps
+APPROVED_APPS=("Safari" "Microsoft Word" "Google Chrome")
+
+# Check installed applications
+INSTALLED_APPS=$(ls /Applications | grep .app)
+
+for app in $INSTALLED_APPS; do
+  APP_NAME=$(basename "$app" .app)
+  if [[ ! " ${APPROVED_APPS[@]} " =~ " ${APP_NAME} " ]]; then
+    echo "Removing unauthorized app: $APP_NAME"
+    rm -rf "/Applications/$app"
+  fi
+done
+
+exit 0
