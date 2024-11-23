@@ -1,0 +1,5 @@
+<characteristic type="com.android.softwareupdate">
+    <parm name="AutoUpdatePolicy" value="forced"/>
+    <parm name="AutoUpdateSchedule" value="daily"/>
+    <parm name="AutoUpdateTime" value="03:00"/>
+</characteristic>
