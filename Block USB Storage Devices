@@ -1,0 +1,6 @@
+# Devices Prevents USB storage devices from being mounted on Windows devices.
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\USBSTOR" -Name "Start" -Value 4
+Write-Output "USB Storage devices are now blocked."
+
+# Optionally log the change
+Out-File -FilePath "C:\Logs\USBBlock.log" -Append -InputObject "$(Get-Date): USB devices blocked"
