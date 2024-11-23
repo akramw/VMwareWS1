@@ -1,0 +1,12 @@
+# Threshold for CPU usage
+$Threshold = 90
+
+# Get CPU load
+$CPUUsage = Get-WmiObject Win32_Processor | Measure-Object -Property LoadPercentage -Average | Select-Object -ExpandProperty Average
+
+if ($CPUUsage -gt $Threshold) {
+    Write-Output "CPU usage is at $CPUUsage%. Initiating shutdown."
+    Stop-Computer -Force
+} else {
+    Write-Output "CPU usage is at $CPUUsage%. System is operating normally."
+}
