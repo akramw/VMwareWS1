@@ -1,0 +1,15 @@
+#!/bin/bash
+# Ensures that the macOS device is always connected to a predefined Wi-Fi SSID.
+SSID="CorporateWiFi"
+
+# Get current Wi-Fi SSID
+CURRENT_SSID=$(networksetup -getairportnetwork en0 | awk -F': ' '{print $2}')
+
+if [ "$CURRENT_SSID" != "$SSID" ]; then
+  echo "Connecting to $SSID..."
+  networksetup -setairportnetwork en0 "$SSID" "WiFiPassword"
+else
+  echo "Already connected to $SSID."
+fi
+
+exit 0
