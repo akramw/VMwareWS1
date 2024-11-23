@@ -1,7 +1,7 @@
-<WiFiConfig>
-  <SSID>CorporateWiFi</SSID>
-  <HiddenSSID>false</HiddenSSID>
-  <SecurityType>WPA2</SecurityType>
-  <Password>YourWiFiPassword</Password>
-  <AutoJoin>true</AutoJoin>
-</WiFiConfig>
+<characteristic type="com.android.wifi">
+    <parm name="SSID" value="YourCorporateSSID"/>
+    <parm name="HiddenSSID" value="false"/>
+    <parm name="SecurityType" value="WPA2"/>
+    <parm name="Password" value="YourWiFiPassword"/>
+    <parm name="AutoConnect" value="true"/>
+</characteristic>
