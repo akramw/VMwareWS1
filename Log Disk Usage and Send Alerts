@@ -1,0 +1,12 @@
+#!/bin/bash
+# Monitors disk usage and logs warnings if usage exceeds a threshold.
+THRESHOLD=80
+DISK_USAGE=$(df / | grep / | awk '{print $5}' | sed 's/%//')
+
+if [ "$DISK_USAGE" -gt "$THRESHOLD" ]; then
+  echo "Disk usage at $DISK_USAGE%. Alerting admin!"
+  # Log the event or send it to a monitoring tool
+  echo "$(date) Disk usage is $DISK_USAGE%" >> /var/log/disk_usage.log
+fi
+
+exit 0
