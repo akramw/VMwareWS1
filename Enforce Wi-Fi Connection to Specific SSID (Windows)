@@ -1,0 +1,12 @@
+# SSID to enforce
+$SSID = "CorporateWiFi"
+
+# Get current Wi-Fi network
+$CurrentSSID = netsh wlan show interfaces | Select-String SSID | Select-String -NotMatch BSSID
+
+if ($CurrentSSID -notlike "*$SSID*") {
+    Write-Output "Not connected to $SSID. Connecting..."
+    netsh wlan connect name=$SSID
+} else {
+    Write-Output "Already connected to $SSID."
+}
