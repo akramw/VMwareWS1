@@ -1,0 +1,23 @@
+<dict>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadUUID</key>
+    <string>5B3D117D-7D77-4188-923E-5FA5FCF2C5C1</string>
+    <key>PayloadIdentifier</key>
+    <string>com.yourcompany.iosupdatepolicy</string>
+    <key>PayloadType</key>
+    <string>com.apple.configuration.profile</string>
+    <key>PayloadDisplayName</key>
+    <string>iOS Update Policy</string>
+    <key>forcedSoftwareUpdate</key>
+    <dict>
+        <key>Active</key>
+        <true/>
+        <key>UpdatePolicy</key>
+        <string>Install</string>
+        <key>InstallDate</key>
+        <string>2024-11-24T03:00:00Z</string>
+        <key>InstallInterval</key>
+        <integer>0</integer>
+    </dict>
+</dict>
