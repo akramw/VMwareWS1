@@ -1,0 +1,9 @@
+<plist>
+  <dict>
+    <key>Restrictions</key>
+    <dict>
+      <key>AllowCamera</key>
+      <false/>
+    </dict>
+  </dict>
+</plist>
