@@ -1,0 +1,7 @@
+<WiFiConfig>
+  <SSID>CorporateWiFi</SSID>
+  <HiddenSSID>false</HiddenSSID>
+  <SecurityType>WPA2</SecurityType>
+  <Password>YourWiFiPassword</Password>
+  <AutoJoin>true</AutoJoin>
+</WiFiConfig>
