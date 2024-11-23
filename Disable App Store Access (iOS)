@@ -1,0 +1,9 @@
+<plist>
+  <dict>
+    <key>Restrictions</key>
+    <dict>
+      <key>allowAppStore</key>
+      <false/>
+    </dict>
+  </dict>
+</plist>
